@@ -5,7 +5,7 @@
 // Author: Elijah Abolaji
 
 
-const apiKey = '034c7cb2e7822c43d2ab81acb3be8891'; // Replace with your actual API key
+const apiKey = ''; // Replace with your actual API key
 const form = document.getElementById('location-form');
 const locationInput = document.getElementById('location');
 const weatherInfo = document.getElementById('weather-info');

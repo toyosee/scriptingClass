@@ -208,11 +208,14 @@
         }
 
 
-        // function to get details from input
+    // function to get details from input
     function submitForm() {
     const displayedDiv = document.getElementById('displayed');
     const enteredName = document.getElementById('nameEntry').value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
+    // const anotherGender = document.getElementsByName('gender').value
+
+    // console.log(anotherGender)
 
     const skills = [];
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');

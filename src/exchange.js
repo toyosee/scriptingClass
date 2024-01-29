@@ -7,7 +7,7 @@ const baseCurrency = document.getElementById('base-currency').value.toUpperCase(
 const targetCurrency = document.getElementById('target-currency').value.toUpperCase();
 const Amount = document.getElementById("amount")
 
-const apiKey = "99977edc7f840f478c0efb35"
+const apiKey = ""
 const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`;
 
 function checkExchangeRate() {
