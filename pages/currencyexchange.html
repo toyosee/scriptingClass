@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rate Checker</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Back button to return to the previous page -->
+        <a href="../index.html" class="btn btn-secondary mb-3">Back</a>
+        <a href="weather.html" class="btn btn-primary mb-3">Weather App</a>
+        <div id="exchange-container">
+            <h1 class="mb-4">Exchange Rate Checker</h1>
+
+            <form id="exchange-form">
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Amount:</label>
+                    <input type="number" id="amount" class="form-control" placeholder="Enter Amount" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="base-currency" class="form-label">Base Currency:</label>
+                    <input type="text" id="base-currency" class="form-control" placeholder="Enter base currency" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="target-currency" class="form-label">Target Currency:</label>
+                    <input type="text" id="target-currency" class="form-control" placeholder="Enter target currency" required>
+                </div>
+
+                <button type="button" onclick="checkExchangeRate()" class="btn btn-primary">Check Exchange Rate</button>
+            </form>
+
+            <div id="result-container" class="card mt-4">
+                <!-- Display exchange rate result here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="../src/exchange.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

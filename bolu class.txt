@@ -1,0 +1,52 @@
+Mapping problem
+
+3 switches, 3 bulbs
+2 rooms
+
+constraint" 1 trip
+
+Solution 
+
+if a bulb  takes 15 mins to get hot
+time interval
+sw1 - 5 mins
+sw2 += 5
+
+
+Add two numbers
+
+Start;
+first_number = 5;
+second_number = 7;
+result = first ........
+output: result
+End;
+
+
+if a == b:
+    do something
+
+if(a == b){do something}
+"" '' 
+
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+if n % 2 != 0:
+    print("Weird")
+if n % 2 == 0 and n in range(2,6):
+    print("Not Weird")
+if n % 2 == 0 and n in range(6,21):
+    print("Weird")
+if n % 2 == 0 and n > 20:
+    print("Not Weird")
+
+MISSIONARY, CANNIBAL PROBLEM
+
+PROBLEM SOLVING
+Guess the next three letters in the series GTNTLITS
+
+
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6 lightDiv">
+            <p><strong>Operations and More....</strong></p>
+        <div>
+            <label for="first">First Number : </label>
+            <input type="number" id="first" required>
+        </div> <br>
+
+        <div>
+            <label for="second">Second Number : </label>
+            <input type="number" id="second" required>
+        </div><br>
+
+        <div>
+            <label for="operation">Operation : </label>
+            <select id="operation" class="btn btn-primary" required>
+                <option value="" selected disabled>Select an operation</option>
+                <option value="+">Addition</option>
+                <option value="-">Subtraction</option>
+                <option value="*">Multiplication</option>
+                <option value="square">Square</option>
+                <option value="triangle">Triangle</option>
+                <option value="mean">Mean</option>
+                <option value="pythagoras">Pythagoras</option>
+            </select>
+        </div><br>
+        
+
+        <div>
+            <input type="button" value="Calculate" class="btn btn-success" onclick="calculate_it()">
+            <a href="../bouncing.html" class="btn btn-primary btn-lg">Check it out</a>
+        </div> <br>
+
+        <div>
+            <h1 id="display"></h1>
+        </div> <br>
+
+        <div id="resultsTable"></div> <br>
+        </div>
+        <div class="col-md-6 temp">
+        <div id="classWork">
+
+            <p>Class Work <br><strong>Check out what the buttons do</strong></p>
+            <input type="button" value="Turn On" class="btn btn-primary" onclick="on_light()">
+            <img src="../images/pic_bulboff.gif" alt="off" id="myImage">
+            <input type="button" value="Turn Off" class="btn btn-secondary" onclick="off_light()">
+        </div>
+        </div>
+    </div><br>
+    <hr> <br>
+
+    <div>
+        <label for="nameEntry">Enter your name : </label>
+        <input type="text" id="nameEntry"><br>
+    </div><br>
+
+    <div>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+    </div><br>
+
+    <div>
+        <label for="skills">Skills:</label><br>
+        <input type="checkbox" id="skill1" value="Programming">
+        <label for="skill1">Programming</label><br>
+        <input type="checkbox" id="skill2" value="Frontend Development">
+        <label for="skill2">Frontend Development</label><br>
+        <input type="checkbox" id="skill3" value="Data Analytics">
+        <label for="skill3">Data Analytics</label><br>
+        <input type="checkbox" id="skill4" value="Graphics Design">
+        <label for="skill4">Graphics Design</label><br>
+        <input type="checkbox" id="skill5" value="UI/UX">
+        <label for="skill5">UI/UX</label><br>
+        <input type="checkbox" id="skill6" value="Software Engineering">
+        <label for="skill6">Software Engineering</label><br>
+        <input type="checkbox" id="skill7" value="Cooking">
+        <label for="skill7">Cooking</label><br>
+    </div><br>
+
+    <input type="button" value="Submit" class="btn btn-primary" onclick="submitForm()">
+
+    <div>
+        <strong id="displayed"></strong>
+    </div>
+
+    </div>
+    
+
+    <script>
+
+        // const ClassWork = document.getElementById("classWork")
+
+
+        const Input1 = document.getElementById("first")
+        const Input2 = document.getElementById("second")
+        const Operation = document.getElementById("operation")
+        const Display = document.getElementById("display")
+        let all_values = []
+
+        // Function for calculation operations
+        function calculate_it(){
+            let result = ''
+            let area = ''
+            let operation = Operation.value
+            let first = Number(Input1.value)
+            let second = Number(Input2.value)
+            if(operation === '+'){
+                result = first + second
+                console.log(result)
+            }
+            else if(operation === '-'){
+                result = first - second
+            }
+            else if(operation === '*'){
+                result = first * second
+            }
+            else if(operation === 'square'){
+                area = first * second
+                result = `Area of Square with length ${first} cm and bredth ${second} cm = ${area} cm2`
+            }
+            else if(operation === 'triangle'){
+                area = 0.5 * first * second
+                result = `Area of Triangle with length ${first} cm and bredth ${second} cm = ${area} cm2`
+            }
+            else if(operation === 'mean'){
+                all_values.push(first,second)
+                let mean = (first + second)/ all_values.length
+                result = `Mean of ${first} and ${second} = ${mean}`
+            }
+            else if(operation === 'pythagoras'){
+                let pytha = Math.sqrt((first**2) + (second**2))
+                result = `Longest side = ${pytha.toFixed(2)} cm`
+            }
+            else{
+                result = 'Please enter an operation'
+            }
+
+
+            // Add the result to the table
+    const table = document.createElement('table');
+    table.classList.add('table', 'table-bordered');
+
+    // Create table headers
+    const headerRow = table.createTHead().insertRow(0);
+    const headers = ['First Number', 'Second Number', 'Operation', 'Result'];
+    headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+    });
+
+
+    const newRow = table.insertRow(-1);
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    const cell3 = newRow.insertCell(2);
+    const cell4 = newRow.insertCell(3);
+    cell1.textContent = first;
+    cell2.textContent = second;
+    cell3.textContent = operation;
+    cell4.textContent = result;
+
+    // Get the results table element and append the new row
+    const resultsTable = document.getElementById('resultsTable');
+    resultsTable.innerHTML = ''; // Clear previous content
+    resultsTable.appendChild(table);
+
+            //console.log(result)
+            Display.innerHTML = `${result}`
+            Input1.value = ''
+            Input2.value = ''
+            Operation.value = ''
+
+        }
+
+        // function show_work(){
+        //     ClassWork.innerHTML = ``
+        // }
+
+        const ImgOn = document.getElementById("myImage")
+        const ImgOff = document.getElementById("myImage")
+        let offBulb = "../images/pic_bulboff.gif"
+        let onBulb = "../images/pic_bulbon.gif"
+
+        // Function to switch on the light
+        function on_light(){
+            ImgOn.src = onBulb
+        }
+
+        // Function to switch off the light
+        function off_light(){
+            ImgOff.src = offBulb
+        }
+
+
+        // function to get details from input
+    function submitForm() {
+    const displayedDiv = document.getElementById('displayed');
+    const enteredName = document.getElementById('nameEntry').value;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+
+    const skills = [];
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    checkboxes.forEach(checkbox => {
+        skills.push(checkbox.value);
+    });
+
+    // console.log('Name:', enteredName);
+    // console.log('Gender:', gender);
+    // console.log('Skills:', skills);
+
+    displayedDiv.innerHTML = `
+        Name: ${enteredName} <br>
+        Gender: ${gender}<br>
+        Skills: ${skills.join(', ')}<br />
+    `;
+}
+
+    </script>
+</body>
+</html>
