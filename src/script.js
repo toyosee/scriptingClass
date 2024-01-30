@@ -41,7 +41,7 @@ function getWeatherData(location) {
 
 function updateUI(data) {
     // Extract relevant information from the data and update the UI
-    const temperature = data.main.temp;
+    const temperature = (data.main.temp - 273.15).toFixed(1);
     const description = data.weather[0].description;
     const location = data.name;
     const lattitude = data.coord.lat
