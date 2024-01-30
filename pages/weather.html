@@ -5,29 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-
-    </style>
-    <link rel="stylesheet" href="../src/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <div class="container">
-    <!-- Back button to return to the previous page -->
-    <a href="../index.html" class="btn btn-secondary mb-3">Back To Dashboard</a>
-    <!-- <a href="currencyexchange.html" class="btn btn-primary mb-3">Exchange Rate Checker</a> -->
-        <div id="weather-container">
-            <h1 class="mb-4">Weather Today</h1>
-            <p><em><strong>Resources: All forcast are based on live data from <a href="https://openweathermap.org/api" target="_blank">Open Weather API.</a></strong></em></p>
+    <div class="container mx-auto py-8">
+        <!-- Back button to return to the previous page -->
+        <a href="../index.html" class="px-4 py-2 bg-black text-white rounded hover:bg-gray-300 hover:text-black">Back To Dashboard</a>
 
+        <div id="weather-container" class="max-w-xl mx-auto bg-white shadow-md rounded p-8">
+            <h1 class="text-3xl font-bold mb-4">Weather Today</h1>
+            <p class="mb-4"><em><strong>Resources: All forecasts are based on live data from <a href="https://openweathermap.org/api" target="_blank" class="text-blue-500">Open Weather API.</a></strong></em></p>
 
-            <form id="location-form">
-                <div class="mb-3">
-                    <label for="location" class="form-label">Enter A Location:</label>
-                    <input type="text" id="location" class="form-control" required>
+            <form id="location-form" class="mb-4">
+                <div class="mb-4">
+                    <label for="location" class="block text-sm font-medium text-gray-700">Enter A Location:</label>
+                    <input type="text" id="location" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Get Weather</button>
+                <button type="submit" class="btn btn-primary px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Get Weather</button>
             </form>
 
             <div id="weather-info" class="card mt-4">
@@ -37,7 +32,5 @@
     </div>
     
     <script src="../src/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
 </body>
 </html>

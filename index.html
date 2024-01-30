@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Application</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css">
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <div class="container text-center mt-5">
-        <h1><strong class="appTitle">Choose an Application</strong></h1>
+    <div class="container mx-auto text-center mt-10">
+        <h1 class="text-3xl font-bold mb-8"><strong class="appTitle">Choose an Application</strong></h1>
 
-        <div class="mt-4">
-            <a href="https://toyotechict.com.ng" class="btn btn-secondary btn-lg">Back To My Site</a>
-            <a href="pages/weather.html" class="btn btn-primary btn-lg">Weather App</a>
-            <a href="pages/currencyexchange.html" class="btn btn-primary btn-lg button-space">Exchange Rate Checker</a>
-            <a href="pages/bmi.html" class="btn btn-primary btn-lg button-space">BMI Calculator</a>
-            <a href="pages/operations.html" class="btn btn-primary btn-lg button-space">Operations and Fun</a>
+        <div class="flex justify-center items-center mt-4">
+            <a href="https://toyotechict.com.ng" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg mr-4 transition duration-300 ease-in-out">Back To My Site</a>
+            <a href="pages/weather.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-4 transition duration-300 ease-in-out">Weather App</a>
+            <a href="pages/currencyexchange.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-4 transition duration-300 ease-in-out">Exchange Rate Checker</a>
+            <a href="pages/bmi.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mx-4 transition duration-300 ease-in-out">BMI Calculator</a>
+            <a href="pages/operations.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg ml-4 transition duration-300 ease-in-out">Operations and Fun</a>
         </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
 </body>
 </html>

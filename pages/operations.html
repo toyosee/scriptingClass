@@ -5,101 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operations</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../src/styles.css">
 </head>
-<body>
-    <div class="container bmiHead">
-        <div class="row">
-        <div class="col-md-6 lightDiv">
-            <p><strong>Operations and More....</strong></p>
-        <div>
-            <label for="first">First Number : </label>
-            <input type="number" id="first" required>
-        </div> <br>
+<body class="bg-gray-100">
 
-        <div>
-            <label for="second">Second Number : </label>
-            <input type="number" id="second" required>
-        </div><br>
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="lightDiv bg-white rounded-lg shadow-md p-6">
+                <p class="text-lg font-semibold">Operations and More....</p>
+                <div class="mt-4">
+                    <label for="first" class="block">First Number:</label>
+                    <input type="number" id="first" class="form-input mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                </div>
+                <div class="mt-4">
+                    <label for="second" class="block">Second Number:</label>
+                    <input type="number" id="second" class="form-input mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                </div>
+                <div class="mt-4">
+                    <label for="operation" class="block">Operation:</label>
+                    <select id="operation" class="form-select mt-1 w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="" selected disabled>Select an operation</option>
+                        <option value="+">Addition</option>
+                        <option value="-">Subtraction</option>
+                        <option value="*">Multiplication</option>
+                        <option value="square">Square</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="mean">Mean</option>
+                        <option value="pythagoras">Pythagoras</option>
+                    </select>
+                </div>
+                <div class="mt-4 flex items-center">
+                    <button type="button" onclick="calculate_it()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Calculate</button>
+                    <a href="../index.html" class="inline-block bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white ml-4">Back to Dashboard</a>
+                </div>
+                <div class="mt-4">
+                    <h1 id="display" class="text-xl font-semibold"></h1>
+                </div>
+                <!-- <div id="resultsTable" class="mt-4"></div> -->
 
-        <div>
-            <label for="operation">Operation : </label>
-            <select id="operation" class="btn btn-primary" required>
-                <option value="" selected disabled>Select an operation</option>
-                <option value="+">Addition</option>
-                <option value="-">Subtraction</option>
-                <option value="*">Multiplication</option>
-                <option value="square">Square</option>
-                <option value="triangle">Triangle</option>
-                <option value="mean">Mean</option>
-                <option value="pythagoras">Pythagoras</option>
-            </select>
-        </div><br>
-        
-
-        <div>
-            <input type="button" value="Calculate" class="btn btn-success" onclick="calculate_it()">
-            <a href="../index.html" class="btn btn-secondary btn-lg">Back to Dashboard</a>
-        </div> <br>
-
-        <div>
-            <h1 id="display"></h1>
-        </div> <br>
-
-        <div id="resultsTable"></div> <br>
+                <!-- HTML structure for the table -->
+<div id="resultsTable" class="mt-4">
+    <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">First Number</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Second Number</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Operation</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Result</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+            <!-- Table content will be added dynamically here -->
+        </tbody>
+    </table>
+</div>
+            </div>
+            <div class="temp bg-white rounded-lg shadow-md p-6">
+                <div id="classWork">
+                    <p class="text-lg font-semibold">Let There Be Light</p>
+                    <p class="mb-4"><strong>Check out what the buttons do</strong></p>
+                    <button type="button" onclick="on_light()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Turn On</button>
+                    <img src="../images/pic_bulboff.gif" alt="off" id="myImage" class="mx-auto mt-4">
+                    <button type="button" onclick="off_light()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Turn Off</button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 temp">
-        <div id="classWork">
-
-            <p>Let There Be Light<br><strong>Check out what the buttons do</strong></p>
-            <input type="button" value="Turn On" class="btn btn-primary" onclick="on_light()">
-            <img src="../images/pic_bulboff.gif" alt="off" id="myImage">
-            <input type="button" value="Turn Off" class="btn btn-secondary" onclick="off_light()">
-        </div>
-        </div>
-    </div><br>
-    <hr> <br>
-
-    <!-- <div>
-        <label for="nameEntry">Enter your name : </label>
-        <input type="text" id="nameEntry"><br>
-    </div><br>
-
-    <div>
-        <label for="gender">Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-    </div><br>
-
-    <div>
-        <label for="skills">Skills:</label><br>
-        <input type="checkbox" id="skill1" value="Programming">
-        <label for="skill1">Programming</label><br>
-        <input type="checkbox" id="skill2" value="Frontend Development">
-        <label for="skill2">Frontend Development</label><br>
-        <input type="checkbox" id="skill3" value="Data Analytics">
-        <label for="skill3">Data Analytics</label><br>
-        <input type="checkbox" id="skill4" value="Graphics Design">
-        <label for="skill4">Graphics Design</label><br>
-        <input type="checkbox" id="skill5" value="UI/UX">
-        <label for="skill5">UI/UX</label><br>
-        <input type="checkbox" id="skill6" value="Software Engineering">
-        <label for="skill6">Software Engineering</label><br>
-        <input type="checkbox" id="skill7" value="Cooking">
-        <label for="skill7">Cooking</label><br>
-    </div><br>
-
-    <input type="button" value="Submit" class="btn btn-primary" onclick="submitForm()">
-
-    <div>
-        <strong id="displayed"></strong>
-    </div> -->
-
     </div>
-    
 
     <script>
 
@@ -151,34 +124,22 @@
             }
 
 
-            // Add the result to the table
-    const table = document.createElement('table');
-    table.classList.add('table', 'table-bordered');
-
-    // Create table headers
-    const headerRow = table.createTHead().insertRow(0);
-    const headers = ['First Number', 'Second Number', 'Operation', 'Result'];
-    headers.forEach(headerText => {
-        const th = document.createElement('th');
-        th.textContent = headerText;
-        headerRow.appendChild(th);
+   // Create a new row
+   const newRow = document.createElement('tr');
+    newRow.classList.add('bg-white');
+    
+    // Populate cells with data
+    [first, second, operation, result].forEach(text => {
+        const cell = document.createElement('td');
+        cell.classList.add('px-6', 'py-4', 'whitespace-nowrap', 'text-sm', 'text-gray-500');
+        cell.textContent = text;
+        newRow.appendChild(cell);
     });
-
-
-    const newRow = table.insertRow(-1);
-    const cell1 = newRow.insertCell(0);
-    const cell2 = newRow.insertCell(1);
-    const cell3 = newRow.insertCell(2);
-    const cell4 = newRow.insertCell(3);
-    cell1.textContent = first;
-    cell2.textContent = second;
-    cell3.textContent = operation;
-    cell4.textContent = result;
-
-    // Get the results table element and append the new row
-    const resultsTable = document.getElementById('resultsTable');
-    resultsTable.innerHTML = ''; // Clear previous content
-    resultsTable.appendChild(table);
+    
+    // Get the results table body and append the new row
+    const tableBody = document.querySelector('#resultsTable tbody');
+    tableBody.innerHTML = ''; // Clear previous content
+    tableBody.appendChild(newRow);
 
             //console.log(result)
             Display.innerHTML = `${result}`
