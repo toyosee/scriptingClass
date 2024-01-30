@@ -40,7 +40,7 @@
 
         <div>
             <input type="button" value="Calculate" class="btn btn-success" onclick="calculate_it()">
-            <a href="../bouncing.html" class="btn btn-primary btn-lg">Check it out</a>
+            <a href="../index.html" class="btn btn-secondary btn-lg">Back to Dashboard</a>
         </div> <br>
 
         <div>
@@ -52,7 +52,7 @@
         <div class="col-md-6 temp">
         <div id="classWork">
 
-            <p>Class Work <br><strong>Check out what the buttons do</strong></p>
+            <p>Let There Be Light<br><strong>Check out what the buttons do</strong></p>
             <input type="button" value="Turn On" class="btn btn-primary" onclick="on_light()">
             <img src="../images/pic_bulboff.gif" alt="off" id="myImage">
             <input type="button" value="Turn Off" class="btn btn-secondary" onclick="off_light()">
@@ -61,7 +61,7 @@
     </div><br>
     <hr> <br>
 
-    <div>
+    <!-- <div>
         <label for="nameEntry">Enter your name : </label>
         <input type="text" id="nameEntry"><br>
     </div><br>
@@ -96,7 +96,7 @@
 
     <div>
         <strong id="displayed"></strong>
-    </div>
+    </div> -->
 
     </div>
     
@@ -151,34 +151,34 @@
             }
 
 
-            // Add the result to the table
-    const table = document.createElement('table');
-    table.classList.add('table', 'table-bordered');
+    //         // Add the result to the table
+    // const table = document.createElement('table');
+    // table.classList.add('table', 'table-bordered');
 
-    // Create table headers
-    const headerRow = table.createTHead().insertRow(0);
-    const headers = ['First Number', 'Second Number', 'Operation', 'Result'];
-    headers.forEach(headerText => {
-        const th = document.createElement('th');
-        th.textContent = headerText;
-        headerRow.appendChild(th);
-    });
+    // // Create table headers
+    // const headerRow = table.createTHead().insertRow(0);
+    // const headers = ['First Number', 'Second Number', 'Operation', 'Result'];
+    // headers.forEach(headerText => {
+    //     const th = document.createElement('th');
+    //     th.textContent = headerText;
+    //     headerRow.appendChild(th);
+    // });
 
 
-    const newRow = table.insertRow(-1);
-    const cell1 = newRow.insertCell(0);
-    const cell2 = newRow.insertCell(1);
-    const cell3 = newRow.insertCell(2);
-    const cell4 = newRow.insertCell(3);
-    cell1.textContent = first;
-    cell2.textContent = second;
-    cell3.textContent = operation;
-    cell4.textContent = result;
+    // const newRow = table.insertRow(-1);
+    // const cell1 = newRow.insertCell(0);
+    // const cell2 = newRow.insertCell(1);
+    // const cell3 = newRow.insertCell(2);
+    // const cell4 = newRow.insertCell(3);
+    // cell1.textContent = first;
+    // cell2.textContent = second;
+    // cell3.textContent = operation;
+    // cell4.textContent = result;
 
-    // Get the results table element and append the new row
-    const resultsTable = document.getElementById('resultsTable');
-    resultsTable.innerHTML = ''; // Clear previous content
-    resultsTable.appendChild(table);
+    // // Get the results table element and append the new row
+    // const resultsTable = document.getElementById('resultsTable');
+    // resultsTable.innerHTML = ''; // Clear previous content
+    // resultsTable.appendChild(table);
 
             //console.log(result)
             Display.innerHTML = `${result}`

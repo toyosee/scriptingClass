@@ -12,10 +12,11 @@
 
     <div class="container">
         <!-- Back button to return to the previous page -->
-        <a href="../index.html" class="btn btn-secondary mb-3">Back</a>
-        <a href="weather.html" class="btn btn-primary mb-3">Weather App</a>
+        <a href="../index.html" class="btn btn-secondary mb-3">Back To Dashboard</a>
+        <!-- <a href="weather.html" class="btn btn-primary mb-3">Weather App</a> -->
         <div id="exchange-container">
             <h1 class="mb-4">Exchange Rate Checker</h1>
+            <p><em><strong>Resources: All prices are based on live data from <a href="https://www.exchangerate-api.com/" target="_blank">Exchange Rate API.</a></strong></em></p>
 
             <form id="exchange-form">
                 <div class="mb-3">
@@ -25,12 +26,16 @@
 
                 <div class="mb-3">
                     <label for="base-currency" class="form-label">Base Currency:</label>
-                    <input type="text" id="base-currency" class="form-control" placeholder="Enter base currency" required>
+                    <select id="base-currency" class="form-select" required>
+                        <!-- Options will be dynamically populated -->
+                    </select>
                 </div>
 
                 <div class="mb-3">
                     <label for="target-currency" class="form-label">Target Currency:</label>
-                    <input type="text" id="target-currency" class="form-control" placeholder="Enter target currency" required>
+                    <select id="target-currency" class="form-select" required>
+                        <!-- Options will be dynamically populated -->
+                    </select>
                 </div>
 
                 <button type="button" onclick="checkExchangeRate()" class="btn btn-primary">Check Exchange Rate</button>
