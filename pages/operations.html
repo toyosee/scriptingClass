@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../src/styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container bmiHead">
         <div class="row">
         <div class="col-md-6 lightDiv">
             <p><strong>Operations and More....</strong></p>
@@ -151,34 +151,34 @@
             }
 
 
-    //         // Add the result to the table
-    // const table = document.createElement('table');
-    // table.classList.add('table', 'table-bordered');
+            // Add the result to the table
+    const table = document.createElement('table');
+    table.classList.add('table', 'table-bordered');
 
-    // // Create table headers
-    // const headerRow = table.createTHead().insertRow(0);
-    // const headers = ['First Number', 'Second Number', 'Operation', 'Result'];
-    // headers.forEach(headerText => {
-    //     const th = document.createElement('th');
-    //     th.textContent = headerText;
-    //     headerRow.appendChild(th);
-    // });
+    // Create table headers
+    const headerRow = table.createTHead().insertRow(0);
+    const headers = ['First Number', 'Second Number', 'Operation', 'Result'];
+    headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+    });
 
 
-    // const newRow = table.insertRow(-1);
-    // const cell1 = newRow.insertCell(0);
-    // const cell2 = newRow.insertCell(1);
-    // const cell3 = newRow.insertCell(2);
-    // const cell4 = newRow.insertCell(3);
-    // cell1.textContent = first;
-    // cell2.textContent = second;
-    // cell3.textContent = operation;
-    // cell4.textContent = result;
+    const newRow = table.insertRow(-1);
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    const cell3 = newRow.insertCell(2);
+    const cell4 = newRow.insertCell(3);
+    cell1.textContent = first;
+    cell2.textContent = second;
+    cell3.textContent = operation;
+    cell4.textContent = result;
 
-    // // Get the results table element and append the new row
-    // const resultsTable = document.getElementById('resultsTable');
-    // resultsTable.innerHTML = ''; // Clear previous content
-    // resultsTable.appendChild(table);
+    // Get the results table element and append the new row
+    const resultsTable = document.getElementById('resultsTable');
+    resultsTable.innerHTML = ''; // Clear previous content
+    resultsTable.appendChild(table);
 
             //console.log(result)
             Display.innerHTML = `${result}`
