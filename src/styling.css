@@ -1,0 +1,28 @@
+body{
+    background-image: url("../images/pic_bulboff.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+h1, p, em,a {
+    color: aliceblue;
+}
+
+.header{
+    text-align: center;
+    background: dodgerblue;
+    color: azure;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.info{
+    text-align: center;
+    background: rgba(255, 0, 0, 0.5);
+    color: black;
+    padding: 10px;
+}
+
+.topic{
+    border-bottom: 2px soild tomato;
+}
