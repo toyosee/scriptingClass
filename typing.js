@@ -75,25 +75,30 @@
 
 // console.log(OpenDoor("", "", ""))
 
-let name = 'Joel'
+// let name = 'Joel'
 
-let names = ['Joel', 'samuel', 'victor', 'uncle Drew']
+// let names = ['Joel', 'samuel', 'victor', 'uncle Drew']
 
-const person = {
-    name: "Joel",
-    hobbies: ["Bombing", "Fishing", "Basket ball", "Policing"],
-    family: {
-        females: ["Mum", "Tayo", "Dammy", "Keye"],
-        males: ["Dad", "Bobo Pablo"]
-    },
-    occupation: "Fisher Man",
-    net_worth : "20 million $",
-    title: "ichie pablo olopa",
-    bio: function(){
-        return `${this.name }'s best hobby is ${this.hobbies[2]}`
-    }
-}
+// const person = {
+//     name: "Joel",
+//     hobbies: ["Bombing", "Fishing", "Basket ball", "Policing"],
+//     family: {
+//         females: ["Mum", "Tayo", "Dammy", "Keye"],
+//         males: ["Dad", "Bobo Pablo"]
+//     },
+//     occupation: "Fisher Man",
+//     net_worth : "20 million $",
+//     title: "ichie pablo olopa",
+//     bio: function(){
+//         return `${this.name }'s best hobby is ${this.hobbies[2]}`
+//     }
+// }
 
-// console.log(person.bio())
+// // console.log(person.bio())
 
-console.log(person.family.males[1])
+// console.log(person.family.males[1])
+
+let entry_name = 'elijah'
+let generator = (Math.random()*10000).toFixed(0)
+let generated = `Your password is : ${entry_name}${generator}`
+console.log(generated)
