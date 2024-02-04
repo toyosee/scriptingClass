@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <!-- Title and Entry Fields Section -->
+        <h1 class="text-3xl font-bold mb-8" id="intro">Invoice Generator</h1>
+        <!-- Entry Fields Section -->
+        
+        <form id="invoiceForm" class="max-w-md mx-auto">
+            <a href="../index.html" class="block py-2 px-4 bg-black text-white text-center font-semibold">Back to Dashboard</a><br>
+            <!-- Entry fields -->
+            <div class="mb-4">
+                <label for="clientName" class="block text-gray-700">Client Name:</label>
+                <input type="text" id="clientName" class="form-input mt-1 block w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="price" class="block text-gray-700">Price:</label>
+                <input type="number" id="price" class="form-input mt-1 block w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="quantity" class="block text-gray-700">Quantity:</label>
+                <input type="number" id="quantity" class="form-input mt-1 block w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="description" class="block text-gray-700">Description:</label>
+                <textarea id="description" class="form-textarea mt-1 block w-full" rows="3" required></textarea>
+            </div>
+            
+            <div class="mb-4">
+                <label for="invoiceDate" class="block text-gray-700">Invoice Date:</label>
+                <input type="date" id="invoiceDate" class="form-input mt-1 block w-full" required>
+            </div>
+            <button type="button" id="generate" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Generate Invoice
+            </button>
+        </form>
+        
+        <!-- Invoice Section -->
+        <div id="invoiceSection" class="hidden mt-8">
+            <div id="invNumber" class="bg-green-500 text-white text-2xl py-2 px-4 mb-4">Invoice #</div>
+            <div id="invoiceContent" class="bg-white rounded-lg shadow-md p-6">
+                <!-- Invoice content will be dynamically generated here -->
+            </div> <br>
+            <!-- Button to show input fields -->
+            <button id="showFormBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 ml-10 rounded">
+                Back to Input
+            </button>
+        </div>
+    </div>
+
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="../src/invoice.js"></script>
+</body>
+</html>
