@@ -1,8 +1,8 @@
-body{
+/* body{
     background-image: url("../images/pic_bulboff.gif");
     background-repeat: no-repeat;
     background-position: right top;
-}
+} */
 
 h1, p, em,a {
     color: aliceblue;
@@ -25,4 +25,19 @@ h1, p, em,a {
 
 .topic{
     border-bottom: 2px soild tomato;
+}
+
+/* Custom styles */
+.custom-card {
+    max-width: 500px;
+    margin: 30px;
+}
+
+.display-card {
+    margin-top: 10px;
+    color: green;
+}
+
+.head{
+    font-weight: bolder;
 }
