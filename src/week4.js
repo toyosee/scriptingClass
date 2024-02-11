@@ -19,15 +19,15 @@ function operate(operator){
     if (operator == '.') {
         result = `${inp1}, ${inp2}`;
         Display.innerHTML = `
-            <h3 class="card-title"> Result Here: </h3>
-            <strong style="color: green"> Your entries are : ${result}</strong>`;
+            <h3 class="card-title"> Result Here:<strong style="color: green"> Your entries are : ${result}</strong> </h3>
+            `;
     } else if (operator == '+') {
         let calInp1 = Number(inp1);
         let calInp2 = Number(inp2);
         if (!isNaN(calInp1) && !isNaN(calInp2)) {
             result = calInp1 + calInp2;
             Display.innerHTML = `
-                <h3 class="card-title">Result =  Result Here: <strong style="color: green">${result}</strong> </h3>
+                <h3 class="card-title">Result Here: <strong style="color: green">${result}</strong> </h3>
                 `;
         } else {
             result = `All inputs for this operation must be numbers`;
