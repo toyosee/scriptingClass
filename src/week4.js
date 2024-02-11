@@ -27,13 +27,13 @@ function operate(operator){
         if (!isNaN(calInp1) && !isNaN(calInp2)) {
             result = calInp1 + calInp2;
             Display.innerHTML = `
-                <h3 class="card-title">Result =  Result Here: </h3>
-                <strong style="color: green">${result}</strong>`;
+                <h3 class="card-title">Result =  Result Here: <strong style="color: green">${result}</strong> </h3>
+                `;
         } else {
             result = `All inputs for this operation must be numbers`;
             Display.innerHTML = `
-                <h3 class="card-title"> Result Here: </h3>
-                <strong style="color: red">${result}</strong>`;
+                <h3 class="card-title"> Result Here: <strong style="color: red"> ${result}</strong> </h3>
+                `;
         }
     }
 }
