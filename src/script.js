@@ -10,8 +10,9 @@ const form = document.getElementById('location-form');
 const locationInput = document.getElementById('location');
 const weatherInfo = document.getElementById('weather-info');
 const dimensions = {
-    "style":"height:100px; width:100px; text-align:center;",
-    "styling": "color:red;"
+    style:`height:100px; width:100px; text-align:center;`,
+    styling: `color:red;`,
+    
 }
 
 
@@ -51,12 +52,16 @@ function updateUI(data) {
     // Map OpenWeatherMap icons to a local icon set or use an external icon library
     const iconUrl = `http://openweathermap.org/img/wn/${weatherIcon}.png`;
 
+    const font = {
+        font: `font-size: 30px;`,
+        workFont: function(){}
+    }
 
     weatherInfo.innerHTML = `
         <h2>Location: ${location}</h2> 
         <h4>Country: ${country}</h4>
         <h4>Lattitude: ${lattitude}</h4>
-        <h4>Temperature: ${temperature} &deg;C</h4>
+        <h4 style = "font-size: 30px;">Temperature: ${temperature} &deg;C</h4>
         <img src="${iconUrl}" alt="Weather Icon" class="mx-auto d-block" style="${dimensions.style}">
         <strong>Description: ${description}</strong>
         

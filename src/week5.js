@@ -79,25 +79,41 @@
 // ResetBtn.addEventListener('click', reset)
 
 
-const Btn1 = document.getElementById('btn1')
-const Btn2 = document.getElementById('btn2')
-const Display = document.getElementById('display')
-let message = ''
+// const Btn1 = document.getElementById('btn1')
+// const Btn2 = document.getElementById('btn2')
+// const Display = document.getElementById('display')
+// let message = ''
 
-const styling = {
-    styles: `font-size:40px; color:green;`,
-    background: `background:pink; color:black; font-size:70px;`
+// const styling = {
+//     styles: `font-size:40px; color:green;`,
+//     background: `background:pink; color:black; font-size:70px;`
+// }
+
+
+// Btn1.addEventListener('mouseover', function(){
+//     message = "Welcome Home"
+//     Display.innerHTML = message
+//     Display.style = styling.styles
+// })
+
+// Btn2.addEventListener('mouseover', function(){
+//     message = "Good Bye"
+//     Display.innerHTML = message
+//     Display.style = styling.background
+// })
+
+const food = ['yam', 'egg', 'pizza']
+let counter = food.forEach(checker)
+// console.log(counter)
+
+function checker(value){
+    let items
+    if(food.indexOf(value) % 2 === 0){
+        console.log("Vitamin")
+    }
+    else{
+        items = `${value} is in Index: ${food.indexOf(value)}`
+        console.log(items)
+    }
+
 }
-
-
-Btn1.addEventListener('mouseover', function(){
-    message = "Welcome Home"
-    Display.innerHTML = message
-    Display.style = styling.styles
-})
-
-Btn2.addEventListener('mouseover', function(){
-    message = "Good Bye"
-    Display.innerHTML = message
-    Display.style = styling.background
-})
