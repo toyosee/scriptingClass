@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Form</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card {
+      margin: 20px auto;
+      max-width: 500px;
+    }
+    .bg{
+        background: black;
+        color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header bg">
+        <strong>Let have fun</strong>
+      </div>
+      <a href="../index.html" class="btn bg">
+        <i class="fas fa-arrow-left mr-2"></i> Back To Dashboard
+      </a>
+      
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="serialNumber">Serial Number:</label>
+            <input type="text" class="form-control" id="serialNumber" placeholder="Enter serial number">
+          </div>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="number1">Number 1:</label>
+            <input type="number" class="form-control" id="number1" placeholder="Enter number">
+          </div>
+          <div class="form-group">
+            <label for="number2">Number 2:</label>
+            <input type="number" class="form-control" id="number2" placeholder="Enter number">
+          </div>
+          <div class="form-group">
+            <label for="operator">Operator:</label>
+            <select class="form-control" id="operator">
+              <option value="+">Addition (+)</option>
+              <option value="-">Subtraction (-)</option>
+              <option value="*">Multiplication (*)</option>
+              <option value="/">Division (/)</option>
+            </select>
+          </div>
+          <button type="submit" id="submit_btn" class="btn btn-primary">Submit</button>
+          <button type="submit" id="reset_btn" class="btn btn-secondary">Reset Form</button>
+          <button type="submit" id="reset_tbl" class="btn btn-danger">Reset table</button>
+        </form>
+      </div>
+    </div>
+    <div id="resultTable"></div>
+  </div>
+
+  <script src="../src/week8.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

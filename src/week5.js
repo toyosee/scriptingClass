@@ -26,12 +26,17 @@
 // const cars = ["Saab", "Volvo", "BMW", "suzuki"]
 // sort_an_array(cars)
 
+// Week 5
+
 // const Input1 = document.getElementById('first')
 // const Input2 = document.getElementById('second')
 // const Input3 = document.getElementById('third')
 // const Btn = document.getElementById('push')
 // const ResetBtn = document.getElementById('reset')
 // const Display = document.getElementById('display')
+
+// console.log(Input1.value)
+// console.log(Input2.value)
 
 // const bahubali = {
 //     firstValue: Input1.value,
@@ -59,6 +64,8 @@
 //         }
 //     }
 // }
+
+
 
 // function doIt(operation){
 //     bahubali.concatenate(operation)
@@ -102,18 +109,37 @@
 //     Display.style = styling.background
 // })
 
-const food = ['yam', 'egg', 'pizza']
-let counter = food.forEach(checker)
-// console.log(counter)
+// const meals = ['yam', 'egg', 'pizza']
+// // let counter = food.forEach(checker)
+// // // console.log(counter)
 
-function checker(value){
-    let items
-    if(food.indexOf(value) % 2 === 0){
-        console.log("Vitamin")
-    }
-    else{
-        items = `${value} is in Index: ${food.indexOf(value)}`
-        console.log(items)
-    }
+// // function checker(value){
+// //     console.log(value)
+// // }
 
-}
+// //food.forEach((value)=>{console.log(value)})
+
+// meals.forEach(function(meal){
+//     let output = `${meal} is in index ${meals.indexOf(meal)}`
+//     console.log(output)
+// })
+
+// const numbers = [1,2,3,4,5,6,7,8,9,10]
+// numbers.unshift("Our list: ")
+// console.log(numbers.join("  "))
+// // numbers.push(24)
+// // numbers.forEach((number) => {
+// //     console.log(number)
+// // })
+
+// const arr1 = ["Emil", "Tobias", "Linus"];
+// const myChildren = arr1.concat("Peter");  
+// console.log(myChildren)
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+// fruits.copyWithin(2, 0, 3); 
+// console.log(fruits)
+
+const myArr = [0,[[1,2],[3,4],[5,6]]];
+//const newArr = myArr.flat();
+console.log(myArr[1][2][1])
